@@ -53,18 +53,21 @@ borrowBook
 
 За да се исполни Every Branch критериумот за оваа функција, потребни се 4 тест случаи.
 Тест случаи според критериумот Multiple condition
-| име на функција           |  тест |
-| ---------------- | ------ | ------ | ------ | ------ |
-| searchBookMultipleCondition           |  T && T → додава во листа |
-| searchBookMultipleCondition           |  F && T → не додава (наслов не се совпаѓа) |
-| searchBookMultipleCondition           |   T && F → не додава (позајмена) |
+| Име на функција                   | Тест                                                                                           |
+| --------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `searchBookMultipleConditionTest` | **T && T** → насловот се совпаѓа и книгата не е позајмена → книгата се додава во листата       |
+| `searchBookMultipleConditionTest` | **F && T** → насловот не се совпаѓа и книгата не е позајмена → книгата не се додава во листата |
+| `searchBookMultipleConditionTest` | **T && F** → насловот се совпаѓа, но книгата е позајмена → книгата не се додава во листата     |
 
 Минимален број на тест случаи за ова функција според Multiple condition критериумот e 3
 
-| име на функција                           |  тест                                                                                    |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------- |                                                             | borrowBookMultipleConditionTest           |  T || T → и title и author се празни → фрла IllegalArgumentException                     |
-| borrowBookMultipleConditionTest           | F || T → title не е празен, author е празен → фрла IllegalArgumentException              |
-| borrowBookMultipleConditionTest           | F || F → и title и author се валидни → методот продолжува нормално (успешно позајмување) |
+
+| Име на функција                   | Тест                                                                                                      |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `borrowBookMultipleConditionTest` | **T || T** → и `title` и `author` се празни → се фрла `IllegalArgumentException`                          |
+| `borrowBookMultipleConditionTest` | **F || T** → `title` не е празен, `author` е празен → се фрла `IllegalArgumentException`                  |
+| `borrowBookMultipleConditionTest` | **F || F** → и `title` и `author` се валидни → методот продолжува нормално и книгата успешно се позајмува |
+
 
 Минимален број на тест случаи за ова функција според Multiple condition критериумот e 3
 
