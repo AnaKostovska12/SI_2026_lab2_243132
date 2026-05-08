@@ -61,10 +61,9 @@ borrowBook
 
 Минимален број на тест случаи за ова функција според Multiple condition критериумот e 3
 
-| име на функција           |  тест |
-| ---------------- | ------ | ------ | ------ | ------ |
-| borrowBookMultipleConditionTest           |  T || T → и title и author се празни → фрла IllegalArgumentException|
-| borrowBookMultipleConditionTest           | F || T → title не е празен, author е празен → фрла IllegalArgumentException |
+| име на функција                           |  тест                                                                                    |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------- |                                                             | borrowBookMultipleConditionTest           |  T || T → и title и author се празни → фрла IllegalArgumentException                     |
+| borrowBookMultipleConditionTest           | F || T → title не е празен, author е празен → фрла IllegalArgumentException              |
 | borrowBookMultipleConditionTest           | F || F → и title и author се валидни → методот продолжува нормално (успешно позајмување) |
 
 Минимален број на тест случаи за ова функција според Multiple condition критериумот e 3
