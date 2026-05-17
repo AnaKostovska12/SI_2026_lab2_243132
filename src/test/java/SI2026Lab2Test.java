@@ -43,16 +43,11 @@ public class SI2026Lab2Test {
 
         assertNotNull(library.searchBookByTitle("Clean Code"));
 
-        assertNull(library.searchBookByTitle("Unknown"));
+        assertNull(library.searchBookByTitle("UnknownTitle"));
 
         library.borrowBook("Clean Code", "Robert C. Martin");
         assertNull(library.searchBookByTitle("Clean Code"));
     }
-
-
-//        // T || F(MISLAM DEKA OVA E NEPOTREBNO)
-//        try { library.borrowBook("", "Author"); fail(); } catch (IllegalArgumentException e) { }
-
 
     @Test
     public void borrowBookMultipleConditionTest() {
@@ -67,7 +62,7 @@ public class SI2026Lab2Test {
                 () -> library.borrowBook("", ""));
 
         assertThrows(IllegalArgumentException.class,
-                () -> library.borrowBook("Title", ""));
+                () -> library.borrowBook("SomeTitle", ""));
 
         library.borrowBook("Clean Code", "Robert C. Martin");
 

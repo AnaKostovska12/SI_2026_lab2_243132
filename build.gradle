@@ -9,15 +9,10 @@ repositories {
     mavenCentral()
 }
 
-//dependencies {
-//    testImplementation platform('org.junit:junit-bom:5.10.0')
-//    testImplementation 'org.junit.jupiter:junit-jupiter'
-//    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-//}
 dependencies {
-    // Оваа линија ги вклучува сите потребни JUnit 5 компоненти одеднаш
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 test {
     useJUnitPlatform()
